@@ -1,16 +1,29 @@
-package webservice.order.user;
+package webservice.order.entities;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_user")
 public class User implements Serializable {
     private static final long serialVersionID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
     private String phone;
     private String cpf;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "client")
+    private List<Order> orderList = new ArrayList<>();
 
     public User(){
     }
@@ -57,6 +70,10 @@ public class User implements Serializable {
 
     public String getCpf() {
         return cpf;
+    }
+
+    public List<Order> getOrderList() {
+        return orderList;
     }
 
     @Override
