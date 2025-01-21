@@ -2,9 +2,7 @@ package webservice.order.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import webservice.order.entities.Category;
 import webservice.order.entities.Product;
-import webservice.order.repositories.CategoryRepository;
 import webservice.order.repositories.ProductRepository;
 
 import java.util.List;

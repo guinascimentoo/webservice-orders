@@ -3,9 +3,7 @@ package webservice.order.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import webservice.order.entities.Order;
-import webservice.order.entities.User;
 import webservice.order.repositories.OrderRepository;
-import webservice.order.repositories.UserRepository;
 
 import java.util.List;
 import java.util.Optional;

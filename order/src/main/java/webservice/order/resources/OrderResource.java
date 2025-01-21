@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import webservice.order.entities.Order;
-import webservice.order.entities.User;
 import webservice.order.services.OrderService;
-import webservice.order.services.UserService;
 
 import java.util.List;
 
